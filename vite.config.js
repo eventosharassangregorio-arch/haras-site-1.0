@@ -15,10 +15,8 @@ const unusedPublicAssets = [
   'images/haras-fachada-evento.webp'
 ]
 
-const cloudinaryPublicAssets = [
-  'images/optimized',
-  'videos'
-]
+const externallyHostedImages = ['images/optimized']
+const externallyHostedVideos = ['videos']
 
 const pruneLegacyRasterWithWebp = async (directory) => {
   let entries = []
@@ -54,11 +52,8 @@ const pruneLegacyRasterWithWebp = async (directory) => {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
-  const hasExternalMedia = Boolean(
-    env.VITE_MEDIA_BASE_URL?.trim() ||
-      env.VITE_IMAGE_BASE_URL?.trim() ||
-      env.VITE_VIDEO_BASE_URL?.trim()
-  )
+  const hasExternalMediaBase = Boolean(env.VITE_MEDIA_BASE_URL?.trim())
+  const hasExternalVideoBase = Boolean(env.VITE_VIDEO_BASE_URL?.trim())
 
   return {
     plugins: [
@@ -67,9 +62,11 @@ export default defineConfig(({ mode }) => {
         name: 'prune-unused-public-assets',
         apply: 'build',
         async closeBundle() {
-          const assetsToPrune = hasExternalMedia
-            ? [...unusedPublicAssets, ...cloudinaryPublicAssets]
-            : unusedPublicAssets
+          const assetsToPrune = [
+            ...unusedPublicAssets,
+            ...(hasExternalMediaBase ? externallyHostedImages : []),
+            ...(hasExternalMediaBase || hasExternalVideoBase ? externallyHostedVideos : [])
+          ]
 
           await Promise.all(
             assetsToPrune.map((asset) =>

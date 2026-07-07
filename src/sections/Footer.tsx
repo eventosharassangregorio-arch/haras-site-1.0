@@ -22,15 +22,15 @@ export function Footer() {
                 image={images.logo}
                 alt={`Logo ${brand.name}`}
                 className="block h-14 w-14 overflow-hidden rounded-full border border-bone/20"
-                imgClassName="h-full w-full object-cover"
+                imgClassName="h-full w-full object-contain"
               />
               <span className="font-serif text-3xl font-medium leading-none tracking-normal">
                 {brand.shortName}
               </span>
             </a>
             <p className="mt-7 max-w-md text-base leading-relaxed text-bone/60">
-              {brand.line} Um lugar reservado, sofisticado e cinematográfico em
-              meio à natureza.
+              {brand.line} Um refúgio reservado, sofisticado e cinematográfico
+              em meio à natureza.
             </p>
           </div>
 

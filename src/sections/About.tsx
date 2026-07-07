@@ -23,17 +23,17 @@ export function About() {
               O Espaço
             </p>
             <h2 className="max-w-5xl font-serif text-[3.15rem] font-medium leading-[0.94] tracking-normal text-forest sm:text-[4.75rem] sm:leading-[0.92] lg:text-[6.5rem] xl:text-[7rem]">
-              Natureza, arquitetura e exclusividade no mesmo lugar.
+              Natureza, arquitetura e exclusividade em um só lugar.
             </h2>
           </motion.div>
           <motion.div variants={fadeUpItem} className="max-w-xl lg:col-span-4 lg:col-start-9">
             <p className="text-base leading-relaxed text-charcoal/70 sm:text-lg">
-              Cada ambiente foi pensado para criar experiências memoráveis, do
-              pôr do sol aos últimos brindes da noite.
+              Cada ambiente foi pensado para receber com elegância, do primeiro
+              encontro no jardim aos últimos brindes da noite.
             </p>
             <div className="mt-7">
               <Button href={whatsappUrl} variant="dark">
-                Conhecer o Espaço
+                Conhecer o espaço
               </Button>
             </div>
           </motion.div>
@@ -46,7 +46,7 @@ export function About() {
           variants={staggerContainer}
           className="grid auto-rows-[22rem] gap-4 lg:grid-cols-12 lg:auto-rows-[20rem]"
         >
-          {spaceImages.map(({ title, image, className, ratio }) => (
+          {spaceImages.map(({ title, image, className, ratio, imgClassName }) => (
             <motion.figure
               key={title}
               variants={fadeUpItem}
@@ -54,9 +54,12 @@ export function About() {
             >
               <ResponsiveImage
                 image={image}
-                alt={`${title} no Eventos Haras São Gregório.`}
+                alt={`${title} no Eventos Haras San Gregório.`}
                 className={`block h-full w-full ${ratio} overflow-hidden lg:aspect-auto`}
-                imgClassName="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-105"
+                imgClassName={[
+                  'h-full w-full object-contain',
+                  imgClassName
+                ].join(' ')}
                 sizes="(min-width: 1024px) 60vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-coal/40 via-transparent to-transparent" />

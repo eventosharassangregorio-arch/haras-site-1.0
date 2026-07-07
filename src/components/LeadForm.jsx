@@ -25,7 +25,7 @@ export function LeadForm() {
       : ''
 
     const message = [
-      `Olá! Gostaria de solicitar um orçamento no ${brand.shortName}.`,
+      `Olá! Gostaria de solicitar um orçamento para o ${brand.shortName}.`,
       '',
       `Nome: ${form.name}`,
       formattedDate ? `Data desejada: ${formattedDate}` : '',

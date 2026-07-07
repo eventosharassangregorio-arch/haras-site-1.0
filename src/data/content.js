@@ -30,8 +30,8 @@ import {
 } from 'lucide-react'
 
 export const brand = {
-  name: 'Eventos Haras São Gregório',
-  shortName: 'Haras São Gregório',
+  name: 'Eventos Haras San Gregório',
+  shortName: 'Haras San Gregório',
   line: 'Um espaço raro para momentos únicos.',
   location: 'Florianópolis, SC'
 }
@@ -91,7 +91,8 @@ const cloudinaryPublicIds = {
   'haras-vestido-arco-900.jpg': 'haras-vestido-arco-900_hgh2nv',
   'haras-vestido-arco-1400.jpg': 'haras-vestido-arco-1400_vhmheu',
   'haras-vestido-arco-2200.jpg': 'haras-vestido-arco-2200_bzzdns',
-  'haras-hero.webm': 'haras-hero_p4m5gm'
+  'haras-hero.webm': 'haras-hero_p4m5gm',
+  'haras-hero.mp4': 'finalizado_video_bzzoej'
 }
 
 const remoteImageBaseUrl =
@@ -114,53 +115,55 @@ const cloudinaryPath = (baseUrl, path) => {
   const extensionStart = file.lastIndexOf('.')
   const extension = extensionStart >= 0 ? file.slice(extensionStart) : ''
   const fallbackId = extensionStart >= 0 ? file.slice(0, extensionStart) : file
-  const publicId =
+  const mappedPublicId =
     cloudinaryPublicIds[file] ||
     cloudinaryPublicIds[`${fallbackId}.jpg`] ||
-    cloudinaryPublicIds[`${fallbackId}.png`] ||
-    fallbackId
+    cloudinaryPublicIds[`${fallbackId}.png`]
 
-  return `${baseUrl}/${publicId}${extension}`
+  if (mappedPublicId) {
+    return `${baseUrl}/${mappedPublicId}`
+  }
+
+  return `${baseUrl}/${fallbackId}${extension}`
 }
 
 const mediaPath = (path) => `${mediaBaseUrl}${path}`
-const imagePath = (path) => cloudinaryPath(imageBaseUrl, path)
+const localImagePath = (path) => mediaPath(path)
 const videoPath = (path) => cloudinaryPath(videoBaseUrl, path)
 
-export const heroVideo = videoPath('/videos/haras-hero.webm')
-export const heroPoster = imagePath('/images/optimized/haras-hero-poster.webp')
+export const heroVideo = videoPath('/videos/haras-hero.mp4')
+export const heroPoster = localImagePath('/images/optimized/haras-fachada-evento-2200.webp')
 
-const local = (src) => ({ src: imagePath(src), fallback: imagePath(src) })
 const publicLocal = (src) => ({ src, fallback: src })
 const responsive = (name, ext = 'webp') => ({
-  src: imagePath(`/images/optimized/${name}-1400.${ext}`),
+  src: localImagePath(`/images/optimized/${name}-1400.${ext}`),
   srcSet: [
-    `${imagePath(`/images/optimized/${name}-900.${ext}`)} 900w`,
-    `${imagePath(`/images/optimized/${name}-1400.${ext}`)} 1400w`,
-    `${imagePath(`/images/optimized/${name}-2200.${ext}`)} 2200w`
+    `${localImagePath(`/images/optimized/${name}-900.${ext}`)} 900w`,
+    `${localImagePath(`/images/optimized/${name}-1400.${ext}`)} 1400w`,
+    `${localImagePath(`/images/optimized/${name}-2200.${ext}`)} 2200w`
   ].join(', '),
-  fallback: imagePath(`/images/optimized/${name}-1400.${ext}`)
+  fallback: localImagePath(`/images/optimized/${name}-1400.${ext}`)
 })
 
 export const images = {
-  heroPoster: local('/images/optimized/haras-hero-poster.webp'),
+  heroPoster: responsive('haras-fachada-evento'),
   hero: responsive('haras-fachada-evento'),
   garden: responsive('haras-evento-jardim'),
   facade: responsive('haras-casal-fachada'),
   watercolor: {
-    src: imagePath('/images/optimized/aquarela-convites-900.webp'),
-    fallback: imagePath('/images/optimized/aquarela-convites-900.webp')
+    src: localImagePath('/images/optimized/aquarela-convites-900.webp'),
+    fallback: localImagePath('/images/optimized/aquarela-convites-900.webp')
   },
   logo: publicLocal('/images/san-gregorio-logo.webp'),
-  pool: local('/images/optimized/haras-hero-poster.webp'),
+  pool: remoteCloudinaryImage('CAPA_SITE_r2glel'),
   sunset: responsive('haras-casal-fachada'),
   horses: responsive('haras-casal-fachada'),
   table: responsive('haras-evento-jardim'),
   interior: responsive('haras-casal-fachada'),
   kitchen: responsive('haras-fachada-evento'),
   child: {
-    src: imagePath('/images/optimized/aquarela-convites-900.webp'),
-    fallback: imagePath('/images/optimized/aquarela-convites-900.webp')
+    src: localImagePath('/images/optimized/aquarela-convites-900.webp'),
+    fallback: localImagePath('/images/optimized/aquarela-convites-900.webp')
   },
   twilight: responsive('haras-casal-fachada'),
   cake: responsive('haras-bolo'),
@@ -170,7 +173,11 @@ export const images = {
   fieldCouple: responsive('haras-campo-casal'),
   dressArch: responsive('haras-vestido-arco'),
   groomsmen: responsive('haras-padrinhos'),
-  coupleStairs: responsive('haras-noivos-escada')
+  coupleStairs: responsive('haras-noivos-escada'),
+  brunaEdu: remoteCloudinaryImage('BrunaeEdu-1_myyvyg'),
+  gourmetMoment: remoteCloudinaryImage('préviasB_G-45_odx8ug'),
+  arrivalDetail: remoteCloudinaryImage('préviasB_G-1_rpizwr'),
+  gardenReception: remoteCloudinaryImage('préviasB_G-11_n7eh3q')
 }
 
 export const navLinks = [
@@ -189,10 +196,11 @@ export const smallSignals = [
 
 export const spaceImages = [
   {
-    title: 'Arquitetura e jardim',
-    image: images.architectureGarden,
+    title: 'Campo e celebração',
+    image: images.fieldCoupleWide,
     className: 'lg:col-span-7 lg:row-span-2',
-    ratio: 'aspect-[4/3] lg:aspect-auto'
+    ratio: 'aspect-[16/10] lg:aspect-auto',
+    imgClassName: ''
   },
   {
     title: 'Salão principal',
@@ -201,8 +209,8 @@ export const spaceImages = [
     ratio: 'aspect-[4/5]'
   },
   {
-    title: 'Campo e celebração',
-    image: images.fieldCoupleWide,
+    title: 'Jardins do Haras',
+    image: images.gardenReception,
     className: 'lg:col-span-5',
     ratio: 'aspect-[5/4]'
   }
@@ -211,19 +219,19 @@ export const spaceImages = [
 export const experiences = [
   {
     title: 'Casamentos',
-    copy: 'Cerimônias ao ar livre e recepções intimistas em um cenário reservado.',
+    copy: 'Cerimônias ao ar livre e recepções elegantes em um cenário reservado, natural e cinematográfico.',
     icon: CalendarHeart,
     image: images.coupleStairs
   },
   {
-    title: 'Eventos sociais',
-    copy: 'Aniversários, noivados e celebrações com atmosfera sofisticada.',
+    title: 'Celebrações sociais',
+    copy: 'Aniversários, noivados e encontros familiares com atmosfera acolhedora e acabamento sofisticado.',
     icon: PartyPopper,
     image: images.cake
   },
   {
-    title: 'Eventos corporativos',
-    copy: 'Experiências fora do comum para marcas e encontros especiais.',
+    title: 'Encontros especiais',
+    copy: 'Experiências reservadas para grupos, marcas e momentos que pedem um lugar fora do comum.',
     icon: UsersRound,
     image: images.groomsmen
   }
@@ -232,7 +240,9 @@ export const experiences = [
 export const gallery = [
   { title: 'Bolo e flores', image: images.cake, ratio: 'aspect-[4/5]' },
   { title: 'Salão de madeira', image: images.salaoCouple, ratio: 'aspect-[5/4]' },
-  { title: 'Arquitetura no jardim', image: images.architectureGarden, ratio: 'aspect-[3/4]' },
+  { title: 'Celebração no jardim', image: images.brunaEdu, ratio: 'aspect-[4/5]' },
+  { title: 'Arquitetura entre árvores', image: images.architectureGarden, ratio: 'aspect-[3/4]' },
+  { title: 'Momento preparado', image: images.gourmetMoment, ratio: 'aspect-[3/4]' },
   { title: 'Campo aberto', image: images.fieldCoupleWide, ratio: 'aspect-[16/10]' },
   { title: 'Retrato no campo', image: images.fieldCouple, ratio: 'aspect-[4/5]' },
   { title: 'Vestido no arco', image: images.dressArch, ratio: 'aspect-[3/4]' },
@@ -240,8 +250,12 @@ export const gallery = [
   { title: 'Noivos na escada', image: images.coupleStairs, ratio: 'aspect-[4/5]' },
   { title: 'Piscina', image: images.pool, ratio: 'aspect-[5/4]' },
   { title: 'Jardim preparado', image: images.garden, ratio: 'aspect-[4/5]' },
-  { title: 'Chegada', image: images.hero, ratio: 'aspect-[5/4]' },
-  { title: 'Natureza', image: images.sunset, ratio: 'aspect-[4/5]' }
+  { title: 'Recepção no jardim', image: images.gardenReception, ratio: 'aspect-[5/4]' },
+  {
+    title: 'Detalhe da celebração',
+    image: images.arrivalDetail,
+    ratio: 'aspect-[4/5]'
+  }
 ]
 
 export const pastEvent = {
@@ -249,7 +263,7 @@ export const pastEvent = {
   title: 'Festa Limão Siciliano',
   subtitle: '',
   copy:
-    'Uma tarde temática entre jardim, piscina, arquitetura e detalhes solares, criada para transformar uma celebração familiar em memória de destino.',
+    'Uma tarde temática entre jardim, piscina, arquitetura e detalhes solares, criada para transformar uma celebração familiar em uma lembrança cheia de presença.',
   images: [
     {
       title: 'Celebração no jardim',
@@ -302,7 +316,7 @@ export const pastEvent = {
       ratio: 'aspect-[3/4]'
     },
     {
-      title: 'Memórias no Haras',
+      title: 'Memórias no campo',
       image: remoteCloudinaryImage('Valentinofaz1ano-1_hxtjqa'),
       ratio: 'aspect-[5/4]'
     }
@@ -352,7 +366,7 @@ export const structureItems = [
     title: 'Churrasqueira',
     copy: 'Um ponto de encontro para celebrações descontraídas com acabamento cuidadoso e ritmo de casa de campo.',
     icon: Flame,
-    image: images.architectureGarden,
+    image: images.gourmetMoment,
     className: 'lg:col-span-4'
   },
   {

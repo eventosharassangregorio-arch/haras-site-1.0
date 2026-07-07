@@ -50,9 +50,9 @@ export function Structure() {
               <div className="grid min-h-full md:grid-cols-[1.05fr_0.95fr]">
                 <ResponsiveImage
                   image={image}
-                  alt={`${title} no Eventos Haras São Gregório.`}
+                  alt={`${title} no Eventos Haras San Gregório.`}
                   className="block min-h-72 overflow-hidden"
-                  imgClassName="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+                  imgClassName="h-full w-full object-contain"
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <div className="flex min-h-72 flex-col justify-between p-7 sm:p-9">

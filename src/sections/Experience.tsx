@@ -22,15 +22,16 @@ export function Experience() {
               Experiências
             </p>
             <h2 className="max-w-5xl font-serif text-[3.15rem] font-medium leading-[0.94] tracking-normal sm:text-[4.75rem] sm:leading-[0.92] lg:text-[7rem] xl:text-[7.5rem]">
-              Celebrações com espaço para respirar.
+              Celebrações com tempo, natureza e presença.
             </h2>
           </motion.div>
           <motion.p
             variants={fadeUpItem}
             className="max-w-xl text-base leading-relaxed text-bone/70 sm:text-lg lg:col-span-4 lg:col-start-9"
           >
-            Casamentos, encontros sociais e eventos para marcas em um cenário
-            reservado entre natureza, arquitetura e experiências inesquecíveis.
+            Casamentos, aniversários e encontros especiais em um cenário
+            reservado, com natureza, arquitetura e serviço pensado para cada
+            momento.
           </motion.p>
         </motion.div>
 
@@ -49,9 +50,9 @@ export function Experience() {
             >
               <ResponsiveImage
                 image={image}
-                alt={`${title} no Eventos Haras São Gregório.`}
+                alt={`${title} no Eventos Haras San Gregório.`}
                 className="absolute inset-0"
-                imgClassName="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-105"
+                imgClassName="h-full w-full object-contain"
                 sizes="(min-width: 768px) 33vw, 100vw"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,18,15,0.08),rgba(16,18,15,0.58)_58%,rgba(16,18,15,0.9))]" />

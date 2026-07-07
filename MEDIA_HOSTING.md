@@ -27,8 +27,8 @@ videos/
 Exemplo: se o dominio da midia for `https://cdn.seudominio.com/haras`, estes arquivos precisam abrir assim:
 
 ```text
-https://cdn.seudominio.com/haras/images/optimized/haras-fachada-evento-1400.jpg
-https://cdn.seudominio.com/haras/images/san-gregorio-logo.jpeg
+https://cdn.seudominio.com/haras/images/optimized/haras-fachada-evento-1400.webp
+https://cdn.seudominio.com/haras/images/san-gregorio-logo.webp
 https://cdn.seudominio.com/haras/videos/haras-hero.webm
 ```
 

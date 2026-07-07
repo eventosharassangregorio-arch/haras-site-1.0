@@ -3,9 +3,12 @@ node_modules/
 .pnpm-debug.log
 
 .env
+.env.apify-airtable
+.env.instagram-scrape
 .DS_Store
 
 *.log
+exports/
 
 desktop-*.png
 mobile-*.png

@@ -66,9 +66,9 @@ export function PastEvents() {
             >
               <ResponsiveImage
                 image={image}
-                alt={`${title} no Eventos Haras São Gregório.`}
+                alt={`${title} no Eventos Haras San Gregório.`}
                 className="absolute inset-0 h-full w-full"
-                imgClassName="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+                imgClassName="h-full w-full object-contain"
                 sizes={
                   cardLayouts[index]?.includes('col-span-2')
                     ? '(min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw'
