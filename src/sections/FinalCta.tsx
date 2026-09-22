@@ -13,7 +13,7 @@ export function FinalCta() {
           image={images.twilight}
           alt="Celebração elegante ao anoitecer no campo."
           className="block h-full w-full"
-          imgClassName="h-full w-full object-contain"
+          imgClassName="h-full w-full object-cover"
           sizes="100vw"
         />
       </div>
@@ -28,17 +28,17 @@ export function FinalCta() {
         className="relative z-10 mx-auto max-w-5xl"
       >
         <p className="mb-7 text-xs font-semibold uppercase tracking-normal text-gold">
-          Atendimento reservado
+          Visita gratuita e sem compromisso
         </p>
-        <h2 className="font-serif text-[3.15rem] font-medium leading-[0.9] tracking-normal sm:text-[5rem] sm:leading-[0.88] lg:text-[8rem] xl:text-[8.5rem]">
-          Grandes histórias começam em lugares inesquecíveis.
+        <h2 className="font-serif h-display">
+          Venha conhecer o Haras. A visita é por nossa conta.
         </h2>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button href={quoteUrl} variant="light">
-            Solicitar orçamento
+            Agendar visita gratuita
           </Button>
           <Button href={whatsappUrl} variant="ghost">
-            Agendar visita
+            Falar no WhatsApp
           </Button>
         </div>
       </motion.div>

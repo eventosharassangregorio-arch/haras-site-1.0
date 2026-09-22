@@ -29,8 +29,8 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-7 max-w-md text-base leading-relaxed text-bone/60">
-              {brand.line} Um refúgio reservado, sofisticado e cinematográfico
-              em meio à natureza.
+              Espaço para casamentos, aniversários e eventos nos Ingleses, em
+              Florianópolis. {brand.address}.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export function Footer() {
         <div className="flex flex-col gap-4 pt-8 text-xs text-bone/40 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 {brand.name}. Todos os direitos reservados.</p>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" className="transition-colors hover:text-bone">
-            Visitas mediante agendamento.
+            Visitas gratuitas, com horário marcado.
           </a>
         </div>
       </motion.div>

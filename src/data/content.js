@@ -1,13 +1,10 @@
 import {
   ArrowUpRight,
-  Baby,
   CalendarHeart,
   Camera,
   Car,
   ChefHat,
-  CircleParking,
   CookingPot,
-  DoorOpen,
   Flame,
   Flower2,
   Gem,
@@ -15,14 +12,12 @@ import {
   HeartHandshake,
   House,
   Instagram,
-  Leaf,
   MapPin,
   MessageCircle,
   PanelsTopLeft,
   PartyPopper,
   Quote,
   Sparkles,
-  Sun,
   Trees,
   UsersRound,
   Utensils,
@@ -33,67 +28,31 @@ export const brand = {
   name: 'Eventos Haras San Gregório',
   shortName: 'Haras San Gregório',
   line: 'Um espaço raro para momentos únicos.',
-  location: 'Florianópolis, SC'
+  location: 'Ingleses · Florianópolis',
+  address: 'Rod. João Gualberto Soares, 3115 · Ingleses do Rio Vermelho, Florianópolis – SC',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rod.+Jo%C3%A3o+Gualberto+Soares%2C+3115%2C+Ingleses+do+Rio+Vermelho%2C+Florian%C3%B3polis'
 }
-
-export const whatsappUrl = 'https://wa.me/message/AKHZGIR7BGP3O1'
-
-export const quoteUrl = whatsappUrl
 
 export const whatsappFormPhone = '5548996729976'
 
 export const whatsappFormUrl = (message) =>
   `https://api.whatsapp.com/send?phone=${whatsappFormPhone}&text=${encodeURIComponent(message)}`
 
+export const whatsappUrl = whatsappFormUrl(
+  'Olá! Vim pelo site e gostaria de agendar uma visita gratuita ao Haras San Gregório. Quais horários vocês têm disponíveis?'
+)
+
+export const quoteUrl = whatsappFormUrl(
+  'Olá! Vim pelo site e gostaria de conversar sobre um evento no Haras San Gregório.'
+)
+
 export const instagramUrl =
   'https://www.instagram.com/eventosharassangregorio?igsh=MXV2NGZheHU4NTR2Zw%3D%3D&utm_source=qr'
 
 const trimUrl = (value = '') => value.trim().replace(/\/$/, '')
-const filename = (path) => path.split('/').pop()
 
 const mediaBaseUrl = trimUrl(import.meta.env.VITE_MEDIA_BASE_URL || '')
 const imageBaseUrl = trimUrl(import.meta.env.VITE_IMAGE_BASE_URL || '')
-const videoBaseUrl = trimUrl(import.meta.env.VITE_VIDEO_BASE_URL || '')
-
-const cloudinaryPublicIds = {
-  'aquarela-convites-900.png': 'aquarela-convites-900_upqwie',
-  'haras-arquitetura-jardim-900.jpg': 'haras-arquitetura-jardim-900_e85ctj',
-  'haras-arquitetura-jardim-1400.jpg': 'haras-arquitetura-jardim-1400_xvvvz5',
-  'haras-arquitetura-jardim-2200.jpg': 'haras-arquitetura-jardim-2200_flx1l9',
-  'haras-bolo-900.jpg': 'haras-bolo-900_klgsts',
-  'haras-bolo-1400.jpg': 'haras-bolo-1400_fye8bd',
-  'haras-bolo-2200.jpg': 'haras-bolo-2200_bszkuc',
-  'haras-campo-casal-900.jpg': 'haras-campo-casal-900_ivkm98',
-  'haras-campo-casal-1400.jpg': 'haras-campo-casal-1400_d1myez',
-  'haras-campo-casal-2200.jpg': 'haras-campo-casal-2200_ssh34m',
-  'haras-campo-casal-wide-900.jpg': 'haras-campo-casal-wide-900_dkrxhk',
-  'haras-campo-casal-wide-1400.jpg': 'haras-campo-casal-wide-1400_srzbgn',
-  'haras-campo-casal-wide-2200.jpg': 'haras-campo-casal-wide-2200_wxhfxn',
-  'haras-casal-fachada-900.jpg': 'haras-casal-fachada-900_akprux',
-  'haras-casal-fachada-1400.jpg': 'haras-casal-fachada-1400_qtcact',
-  'haras-casal-fachada-2200.jpg': 'haras-casal-fachada-2200_kdvvsq',
-  'haras-evento-jardim-900.jpg': 'haras-evento-jardim-900_jl1eda',
-  'haras-evento-jardim-1400.jpg': 'haras-evento-jardim-1400_uin84t',
-  'haras-evento-jardim-2200.jpg': 'haras-evento-jardim-2200_okpt5w',
-  'haras-fachada-evento-900.jpg': 'haras-fachada-evento-900_vr5ygs',
-  'haras-fachada-evento-1400.jpg': 'haras-fachada-evento-1400_cfuyjz',
-  'haras-fachada-evento-2200.jpg': 'haras-fachada-evento-2200_l3acc3',
-  'haras-hero-poster.jpg': 'haras-hero-poster_ype6vb',
-  'haras-noivos-escada-900.jpg': 'haras-noivos-escada-900_w2cxke',
-  'haras-noivos-escada-1400.jpg': 'haras-noivos-escada-1400_aa2zyv',
-  'haras-noivos-escada-2200.jpg': 'haras-noivos-escada-2200_bqalz5',
-  'haras-padrinhos-900.jpg': 'haras-padrinhos-900_woa28n',
-  'haras-padrinhos-1400.jpg': 'haras-padrinhos-1400_pzvs9g',
-  'haras-padrinhos-2200.jpg': 'haras-padrinhos-2200_p7gjmt',
-  'haras-salao-casal-900.jpg': 'haras-salao-casal-900_oymwi3',
-  'haras-salao-casal-1400.jpg': 'haras-salao-casal-1400_zcyij8',
-  'haras-salao-casal-2200.jpg': 'haras-salao-casal-2200_hsgwjc',
-  'haras-vestido-arco-900.jpg': 'haras-vestido-arco-900_hgh2nv',
-  'haras-vestido-arco-1400.jpg': 'haras-vestido-arco-1400_vhmheu',
-  'haras-vestido-arco-2200.jpg': 'haras-vestido-arco-2200_bzzdns',
-  'haras-hero.webm': 'haras-hero_p4m5gm',
-  'haras-hero.mp4': 'finalizado_video_bzzoej'
-}
 
 const remoteImageBaseUrl =
   imageBaseUrl || 'https://res.cloudinary.com/dfugu53pd/image/upload/f_webp,q_auto'
@@ -108,30 +67,14 @@ const remoteCloudinaryImage = (publicId) => ({
   fallback: `${remoteImageBaseUrl}/${publicId}`
 })
 
-const cloudinaryPath = (baseUrl, path) => {
-  if (!baseUrl) return mediaPath(path)
-
-  const file = filename(path)
-  const extensionStart = file.lastIndexOf('.')
-  const extension = extensionStart >= 0 ? file.slice(extensionStart) : ''
-  const fallbackId = extensionStart >= 0 ? file.slice(0, extensionStart) : file
-  const mappedPublicId =
-    cloudinaryPublicIds[file] ||
-    cloudinaryPublicIds[`${fallbackId}.jpg`] ||
-    cloudinaryPublicIds[`${fallbackId}.png`]
-
-  if (mappedPublicId) {
-    return `${baseUrl}/${mappedPublicId}`
-  }
-
-  return `${baseUrl}/${fallbackId}${extension}`
-}
-
 const mediaPath = (path) => `${mediaBaseUrl}${path}`
 const localImagePath = (path) => mediaPath(path)
-const videoPath = (path) => cloudinaryPath(videoBaseUrl, path)
 
-export const heroVideo = videoPath('/videos/haras-hero.mp4')
+export const heroVideoSources = {
+  // Drone real do Haras (piscina, tenda e casa vistos do alto).
+  desktop: localImagePath('/videos/haras-hero-desktop.mp4'),
+  mobile: localImagePath('/videos/haras-hero-mobile.mp4')
+}
 export const heroPoster = localImagePath('/images/optimized/haras-fachada-evento-2200.webp')
 
 const publicLocal = (src) => ({ src, fallback: src })
@@ -177,40 +120,54 @@ export const images = {
   brunaEdu: remoteCloudinaryImage('BrunaeEdu-1_myyvyg'),
   gourmetMoment: remoteCloudinaryImage('préviasB_G-45_odx8ug'),
   arrivalDetail: remoteCloudinaryImage('préviasB_G-1_rpizwr'),
-  gardenReception: remoteCloudinaryImage('préviasB_G-11_n7eh3q')
+  gardenReception: remoteCloudinaryImage('préviasB_G-11_n7eh3q'),
+  venueHall: responsive('mg-7046'),
+  venueHallWide: responsive('mg-7049'),
+  venueChandelier: responsive('mg-7051'),
+  venueLounge: responsive('mg-7057'),
+  venuePool: responsive('mg-7067'),
+  venuePoolArch: responsive('mg-7068'),
+  venueGardenArch: responsive('mg-7074'),
+  venueSinuca: responsive('mg-7093'),
+  venueChurrasqueira: responsive('mg-7096'),
+  venueFoyer: responsive('mg-7112'),
+  venueStairsGolden: responsive('mg-7113'),
+  venuePoolGarden: responsive('mg-7124'),
+  venueFacade: responsive('mg-7136'),
+  venueArcades: responsive('mg-7138')
 }
 
 export const navLinks = [
   { href: '#espaco', label: 'O Espaço' },
   { href: '#eventos', label: 'Eventos' },
-  { href: '#galeria', label: 'Galeria' },
-  { href: '#visitas', label: 'Visitas' },
+  { href: '#estrutura', label: 'Estrutura' },
+  { href: '#visitas', label: 'Visita' },
   { href: '#contato', label: 'Contato' }
 ]
 
 export const smallSignals = [
-  { label: 'Natureza', icon: Leaf },
-  { label: 'Privacidade', icon: Gem },
-  { label: 'Atmosfera', icon: Sun }
+  { label: 'Visita gratuita', icon: CalendarHeart },
+  { label: 'Piscina semi-olímpica', icon: Waves },
+  { label: 'Mesas, cadeiras e louça incluídas', icon: Utensils }
 ]
 
 export const spaceImages = [
   {
-    title: 'Campo e celebração',
-    image: images.fieldCoupleWide,
+    title: 'Piscina e jardins',
+    image: images.venuePool,
     className: 'lg:col-span-7 lg:row-span-2',
     ratio: 'aspect-[16/10] lg:aspect-auto',
     imgClassName: ''
   },
   {
     title: 'Salão principal',
-    image: images.salaoCouple,
+    image: images.venueFoyer,
     className: 'lg:col-span-5',
     ratio: 'aspect-[4/5]'
   },
   {
-    title: 'Jardins do Haras',
-    image: images.gardenReception,
+    title: 'Arcadas do Haras',
+    image: images.venueArcades,
     className: 'lg:col-span-5',
     ratio: 'aspect-[5/4]'
   }
@@ -219,43 +176,40 @@ export const spaceImages = [
 export const experiences = [
   {
     title: 'Casamentos',
-    copy: 'Cerimônias ao ar livre e recepções elegantes em um cenário reservado, natural e cinematográfico.',
+    copy: 'Cerimônia e festa no mesmo lugar, cercados de verde. Ideal para casamentos e mini weddings, com a intimidade que um salão comum não tem.',
     icon: CalendarHeart,
     image: images.coupleStairs
   },
   {
-    title: 'Celebrações sociais',
-    copy: 'Aniversários, noivados e encontros familiares com atmosfera acolhedora e acabamento sofisticado.',
+    title: 'Aniversários e festas',
+    copy: '15 anos, noivados, encontros de família. Piscina, churrasqueira e gramado para todo mundo ficar à vontade.',
     icon: PartyPopper,
     image: images.cake
   },
   {
-    title: 'Encontros especiais',
-    copy: 'Experiências reservadas para grupos, marcas e momentos que pedem um lugar fora do comum.',
+    title: 'Confraternizações e eventos de empresa',
+    copy: 'Um lugar fora do escritório para reunir a equipe ou receber clientes.',
     icon: UsersRound,
-    image: images.groomsmen
+    image: images.venueChurrasqueira
   }
 ]
 
 export const gallery = [
+  { title: 'Salão de madeira', image: images.venueHallWide, ratio: 'aspect-[5/4]' },
+  { title: 'Piscina e arco', image: images.venuePoolArch, ratio: 'aspect-[4/5]' },
   { title: 'Bolo e flores', image: images.cake, ratio: 'aspect-[4/5]' },
-  { title: 'Salão de madeira', image: images.salaoCouple, ratio: 'aspect-[5/4]' },
   { title: 'Celebração no jardim', image: images.brunaEdu, ratio: 'aspect-[4/5]' },
-  { title: 'Arquitetura entre árvores', image: images.architectureGarden, ratio: 'aspect-[3/4]' },
-  { title: 'Momento preparado', image: images.gourmetMoment, ratio: 'aspect-[3/4]' },
-  { title: 'Campo aberto', image: images.fieldCoupleWide, ratio: 'aspect-[16/10]' },
+  { title: 'Arcadas e jardim', image: images.venueArcades, ratio: 'aspect-[3/4]' },
+  { title: 'Sinuca e lazer', image: images.venueSinuca, ratio: 'aspect-[3/4]' },
+  { title: 'Churrasqueira', image: images.venueChurrasqueira, ratio: 'aspect-[4/5]' },
+  { title: 'Escadaria', image: images.venueStairsGolden, ratio: 'aspect-[4/5]' },
   { title: 'Retrato no campo', image: images.fieldCouple, ratio: 'aspect-[4/5]' },
   { title: 'Vestido no arco', image: images.dressArch, ratio: 'aspect-[3/4]' },
   { title: 'Padrinhos', image: images.groomsmen, ratio: 'aspect-[5/4]' },
-  { title: 'Noivos na escada', image: images.coupleStairs, ratio: 'aspect-[4/5]' },
-  { title: 'Piscina', image: images.pool, ratio: 'aspect-[5/4]' },
+  { title: 'Entrada do Haras', image: images.venueFacade, ratio: 'aspect-[5/4]' },
   { title: 'Jardim preparado', image: images.garden, ratio: 'aspect-[4/5]' },
   { title: 'Recepção no jardim', image: images.gardenReception, ratio: 'aspect-[5/4]' },
-  {
-    title: 'Detalhe da celebração',
-    image: images.arrivalDetail,
-    ratio: 'aspect-[4/5]'
-  }
+  { title: 'Salão com lustre', image: images.venueChandelier, ratio: 'aspect-[4/5]' }
 ]
 
 export const pastEvent = {
@@ -323,86 +277,123 @@ export const pastEvent = {
   ]
 }
 
+export const googleRating = { score: '4,9', count: 37 }
+
 export const testimonials = [
   {
-    quote: 'Local excelente para eventos',
-    author: 'Murillo Alano de Souza',
-    meta: 'Google • 21 de jul. de 2022'
+    quote: 'Superou as expectativas, nosso evento foi perfeito graças ao local, que é lindo, com muitos atrativos e o atendimento nota 10 de toda a equipe.',
+    author: 'Bianca M.',
+    meta: 'Avaliação no Google'
   },
   {
-    quote: 'Muy hermoso lugar',
-    author: 'Rafael Malacosti',
-    meta: 'Google • há 15 semanas'
+    quote: 'Um lugar lindo em meio à natureza, com uma estrutura fantástica para guardar lindas memórias.',
+    author: 'Sonia B.',
+    meta: 'Avaliação no Google'
   },
   {
-    quote: 'Lindo haras',
-    author: 'Petra Wamser',
-    meta: 'Google • 24 de abr. de 2024'
+    quote: 'Super bem cuidado, os cavalos são lindos e muito bem tratados. Fui muito bem recebido, pessoal atencioso e simpático.',
+    author: 'Bruno L.',
+    meta: 'Avaliação no Google'
+  },
+  {
+    quote: 'Arquitetura magnífica, um recanto do campo na ilha.',
+    author: 'Gustavo D.',
+    meta: 'Avaliação no Google'
+  },
+  {
+    quote: 'Fiz meu pré-wedding e amei. Foi incrível, o local é muito lindo.',
+    author: 'Eliza S.',
+    meta: 'Avaliação no Google'
+  },
+  {
+    quote: 'Ótimo local para fazer eventos. Muito aconchegante e lindo. Experiência única!',
+    author: 'Ariel V.',
+    meta: 'Avaliação no Google'
   }
 ]
 
 export const footerLinks = [
   { label: 'Instagram', href: instagramUrl, icon: Instagram },
   { label: 'WhatsApp', href: whatsappUrl, icon: MessageCircle },
-  { label: 'Florianópolis, SC', href: 'https://maps.google.com/?q=Florian%C3%B3polis%20SC', icon: MapPin }
+  { label: 'Ingleses, Florianópolis', href: brand.mapsUrl, icon: MapPin }
 ]
 
 export const structureItems = [
   {
     title: 'Piscina semi-olímpica',
-    copy: 'Um espelho azul em meio ao verde, ideal para recepções de dia, editoriais e momentos de respiro.',
+    copy: 'Uma piscina de verdade, das grandes, que vira o centro da festa.',
     icon: Waves,
-    image: images.pool,
+    image: images.venuePoolGarden,
     className: 'lg:col-span-7'
   },
   {
-    title: 'Salão principal',
-    copy: 'Interiores em madeira, escala acolhedora e atmosfera elegante para jantares, festas e cerimônias reservadas.',
+    title: 'Salão de madeira',
+    copy: 'Acolhe de 50 a 60 pessoas e se conecta com a área externa.',
     icon: PanelsTopLeft,
-    image: images.salaoCouple,
+    image: images.venueHall,
     className: 'lg:col-span-5'
   },
   {
-    title: 'Churrasqueira',
-    copy: 'Um ponto de encontro para celebrações descontraídas com acabamento cuidadoso e ritmo de casa de campo.',
-    icon: Flame,
-    image: images.gourmetMoment,
-    className: 'lg:col-span-4'
-  },
-  {
-    title: 'Cozinha completa',
-    copy: 'Estrutura de apoio para equipes, menus autorais e serviços desenhados com fluidez.',
-    icon: CookingPot,
-    image: images.cake,
-    className: 'lg:col-span-4'
-  },
-  {
-    title: 'Áreas verdes',
-    copy: 'Gramados amplos, jardins e árvores que emolduram a experiência com uma presença natural e silenciosa.',
+    title: 'Jardins e áreas verdes',
+    copy: 'Gramado e espaço aberto para cerimônia, recepção e para as crianças correrem.',
     icon: Flower2,
-    image: images.garden,
-    className: 'lg:col-span-4'
+    image: images.venueGardenArch,
+    className: 'lg:col-span-12'
+  }
+]
+
+export const includedItems = [
+  '10 mesas, cada uma para 6 a 8 pessoas',
+  '80 cadeiras Tramontina Alegra',
+  'Pratos, talheres e copos para 80 pessoas'
+]
+
+export const availableItems = [
+  { label: 'Cozinha completa', icon: CookingPot },
+  { label: 'Freezers e geladeiras', icon: Utensils },
+  { label: 'Churrasqueira', icon: Flame },
+  { label: 'Mesa de sinuca', icon: Gem }
+]
+
+export const visitSteps = [
+  {
+    title: 'Você chama no WhatsApp',
+    copy: 'Conta o que está planejando: tipo de evento, data e número de convidados.'
   },
   {
-    title: 'Estacionamento',
-    copy: 'Chegada confortável para convidados, fornecedores e produção do evento.',
-    icon: CircleParking,
-    image: images.groomsmen,
-    className: 'lg:col-span-4'
+    title: 'Combinamos um horário',
+    copy: 'Mostramos o espaço com calma: salão, jardim, piscina e cozinha.'
   },
   {
-    title: 'Espaços abertos',
-    copy: 'Ambientes externos para cerimônias, cocktails, ilhas gastronômicas e lounges sob o céu.',
-    icon: DoorOpen,
-    image: images.fieldCoupleWide,
-    className: 'lg:col-span-5'
+    title: 'Você tira as dúvidas',
+    copy: 'E recebe uma proposta pensada para o seu evento, sem compromisso.'
+  }
+]
+
+export const faqs = [
+  {
+    q: 'A visita tem algum custo?',
+    a: 'Não. A visita é gratuita e sem compromisso. Combinamos o melhor horário com você.'
   },
   {
-    title: 'Área infantil',
-    copy: 'Respiro para famílias e acolhimento para crianças, sem quebrar a elegância da celebração.',
-    icon: Baby,
-    image: images.dressArch,
-    className: 'lg:col-span-3'
+    q: 'Quanto custa?',
+    a: 'Depende do número de convidados, dos dias de montagem e dos serviços de que você precisa. Por isso montamos a proposta depois de entender o seu plano, na visita ou pelo WhatsApp.'
+  },
+  {
+    q: 'Quantos convidados cabem?',
+    a: 'Recebemos desde encontros pequenos até celebrações maiores. O formato ideal depende do seu evento: conte quantos convidados você imagina e mostramos, na visita, como o espaço se adapta.'
+  },
+  {
+    q: 'O que já vem incluso?',
+    a: '10 mesas (cada uma para 6 a 8 pessoas), 80 cadeiras Tramontina Alegra e pratos, talheres e copos para 80 pessoas. Também estão à disposição cozinha completa, freezers, geladeiras, churrasqueira e mesa de sinuca.'
+  },
+  {
+    q: 'Posso montar em mais de um dia?',
+    a: 'Sim. A montagem em mais de um dia é combinada caso a caso.'
+  },
+  {
+    q: 'Onde fica?',
+    a: 'Nos Ingleses, em Florianópolis, perto do Costão Golf: Rod. João Gualberto Soares, 3115.'
   }
 ]
 

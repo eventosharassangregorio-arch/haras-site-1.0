@@ -22,18 +22,18 @@ export function About() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               O Espaço
             </p>
-            <h2 className="max-w-5xl font-serif text-[3.15rem] font-medium leading-[0.94] tracking-normal text-forest sm:text-[4.75rem] sm:leading-[0.92] lg:text-[6.5rem] xl:text-[7rem]">
-              Natureza, arquitetura e exclusividade em um só lugar.
+            <h2 className="max-w-5xl font-serif text-forest h-display">
+              Espaço para eventos nos Ingleses, com tudo pronto para receber.
             </h2>
           </motion.div>
           <motion.div variants={fadeUpItem} className="max-w-xl lg:col-span-4 lg:col-start-9">
             <p className="text-base leading-relaxed text-charcoal/70 sm:text-lg">
-              Cada ambiente foi pensado para receber com elegância, do primeiro
-              encontro no jardim aos últimos brindes da noite.
+              Salão de madeira, jardins e piscina em um só lugar. Você recebe
+              seus convidados com mesas, cadeiras e louça já incluídas.
             </p>
             <div className="mt-7">
               <Button href={whatsappUrl} variant="dark">
-                Conhecer o espaço
+                Agendar visita gratuita
               </Button>
             </div>
           </motion.div>
@@ -57,7 +57,7 @@ export function About() {
                 alt={`${title} no Eventos Haras San Gregório.`}
                 className={`block h-full w-full ${ratio} overflow-hidden lg:aspect-auto`}
                 imgClassName={[
-                  'h-full w-full object-contain',
+                  'h-full w-full object-cover',
                   imgClassName
                 ].join(' ')}
                 sizes="(min-width: 1024px) 60vw, 100vw"

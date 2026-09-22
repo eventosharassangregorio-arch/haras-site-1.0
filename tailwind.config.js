@@ -16,7 +16,7 @@ export default {
         gold: '#B89A5E'
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
         sans: ['Manrope', 'Inter', 'Arial', 'sans-serif']
       },
       boxShadow: {

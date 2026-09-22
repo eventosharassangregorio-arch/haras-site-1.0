@@ -16,7 +16,7 @@ export function Visit() {
           image={images.sunset}
           alt="Vista do Haras San Gregório em meio à natureza."
           className="block h-full w-full"
-          imgClassName="h-full w-full object-contain"
+          imgClassName="h-full w-full object-cover"
           sizes="100vw"
         />
       </div>
@@ -31,21 +31,21 @@ export function Visit() {
           className="max-w-4xl lg:col-span-7"
         >
           <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
-            Visite o Haras San Gregório
+            Visita gratuita
           </p>
-          <h2 className="font-serif text-[3.15rem] font-medium leading-[0.9] tracking-normal sm:text-[5rem] sm:leading-[0.88] lg:text-[7.5rem] xl:text-[8rem]">
+          <h2 className="font-serif h-display">
             Alguns lugares precisam ser vistos pessoalmente.
           </h2>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-bone/70 sm:text-lg">
-            Agende uma visita e descubra, com calma, a atmosfera do Haras San
-            Gregório.
+            Agende uma visita gratuita, conheça o espaço e imagine o seu dia.
+            Sem compromisso.
           </p>
           <div className="mt-9 flex flex-col items-start gap-3 sm:flex-row">
             <Button href={whatsappUrl} variant="light">
-              Agendar visita
+              Agendar visita gratuita
             </Button>
             <Button href={whatsappUrl} variant="ghost">
-              WhatsApp
+              Falar no WhatsApp
             </Button>
           </div>
         </motion.div>
@@ -60,10 +60,10 @@ export function Visit() {
           <div className="mb-7 flex items-center justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-normal text-gold">
-                Orçamento
+                Visita gratuita
               </p>
               <h3 className="mt-2 font-serif text-4xl font-medium leading-none text-forest">
-                Pedido reservado.
+                Agende sua visita.
               </h3>
             </div>
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-charcoal/10 text-gold">

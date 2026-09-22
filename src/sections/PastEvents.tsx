@@ -35,7 +35,7 @@ export function PastEvents() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               {pastEvent.eyebrow}
             </p>
-            <h2 className="max-w-5xl font-serif text-[3.15rem] font-medium leading-[0.94] tracking-normal text-bone sm:text-[4.75rem] sm:leading-[0.92] lg:text-[6.5rem] xl:text-[7rem]">
+            <h2 className="max-w-5xl font-serif text-bone h-display">
               {pastEvent.title}
             </h2>
           </motion.div>

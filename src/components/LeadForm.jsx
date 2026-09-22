@@ -1,9 +1,13 @@
 import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { brand, whatsappFormUrl } from '../data/content.js'
+import { track } from '../lib/tracking.js'
+
+const eventTypes = ['Casamento', 'Aniversário ou festa', 'Evento de empresa', 'Outro']
 
 const initialForm = {
   name: '',
+  type: '',
   date: '',
   guests: '',
   phone: ''
@@ -25,9 +29,10 @@ export function LeadForm() {
       : ''
 
     const message = [
-      `Olá! Gostaria de solicitar um orçamento para o ${brand.shortName}.`,
+      `Olá! Gostaria de agendar uma visita gratuita ao ${brand.shortName}.`,
       '',
       `Nome: ${form.name}`,
+      form.type ? `Tipo de evento: ${form.type}` : '',
       formattedDate ? `Data desejada: ${formattedDate}` : '',
       form.guests ? `Número de convidados: ${form.guests}` : '',
       `WhatsApp: ${form.phone}`
@@ -35,6 +40,7 @@ export function LeadForm() {
       .filter((line) => line !== '')
       .join('\n')
 
+    track('generate_lead', { section: 'formulario', guests: form.guests || undefined })
     window.open(whatsappFormUrl(message), '_blank', 'noopener,noreferrer')
   }
 
@@ -58,10 +64,24 @@ export function LeadForm() {
         />
       </div>
 
+      <div>
+        <label htmlFor="lead-type" className="mb-2 block text-xs font-semibold uppercase tracking-normal text-charcoal/60">
+          Tipo de evento
+        </label>
+        <select id="lead-type" name="type" value={form.type} onChange={handleChange} className={inputClass}>
+          <option value="">Selecione</option>
+          {eventTypes.map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </div>
+
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="lead-date" className="mb-2 block text-xs font-semibold uppercase tracking-normal text-charcoal/60">
-            Data
+            Data aproximada
           </label>
           <input
             id="lead-date"
@@ -109,7 +129,7 @@ export function LeadForm() {
         type="submit"
         className="group mt-2 inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-forest bg-forest px-6 py-3 text-xs font-semibold uppercase tracking-normal text-bone transition-all duration-500 hover:bg-transparent hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-forest sm:min-h-14"
       >
-        Enviar pelo WhatsApp
+        Quero agendar minha visita
         <ArrowUpRight
           aria-hidden="true"
           className="h-4 w-4 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

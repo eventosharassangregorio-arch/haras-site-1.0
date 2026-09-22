@@ -6,6 +6,9 @@ import { Footer } from './sections/Footer'
 import { Gallery } from './sections/Gallery'
 import { Hero } from './sections/Hero'
 import { PastEvents } from './sections/PastEvents'
+import { Structure } from './sections/Structure'
+import { HowItWorks } from './sections/HowItWorks'
+import { Faq } from './sections/Faq'
 import { Testimonials } from './sections/Testimonials'
 import { Visit } from './sections/Visit'
 
@@ -15,10 +18,13 @@ function App() {
       <Hero />
       <About />
       <Experience />
+      <Structure />
+      <HowItWorks />
       <Visit />
       <Gallery />
       <PastEvents />
       <Testimonials />
+      <Faq />
       <FinalCta />
       <Footer />
       <FloatingWhatsApp />

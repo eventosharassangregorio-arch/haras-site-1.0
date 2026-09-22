@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -94,17 +94,40 @@ a {
 
 .hero-title {
   color: #fffaf0;
-  text-shadow:
-    0 2px 18px rgba(2, 10, 7, 0.64),
-    0 14px 42px rgba(2, 10, 7, 0.52);
+  text-shadow: 0 1px 28px rgba(2, 10, 7, 0.4);
 }
 
 .hero-title-line {
   display: block;
 }
 
-.hero-title-line-top {
-  transform: translateY(-0.09em);
+.h-display {
+  font-size: clamp(2.1rem, 1.2rem + 2.6vw, 3.9rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.h-hero {
+  font-size: clamp(2.35rem, 1.1rem + 3.9vw, 4.75rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.hero-still {
+  animation: hero-drift 28s ease-in-out infinite alternate;
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-still { animation: none; }
 }
 
 .hero-cinema-grade {
@@ -122,6 +145,7 @@ a {
   inset: 0;
   content: '';
   background:
+    linear-gradient(90deg, rgba(8, 14, 10, 0.55) 0%, rgba(8, 14, 10, 0.22) 55%, transparent 80%),
     radial-gradient(ellipse at center, transparent 42%, rgba(2, 10, 7, 0.42) 100%),
     linear-gradient(90deg, rgba(2, 10, 7, 0.16), transparent 24%, transparent 70%, rgba(2, 10, 7, 0.22));
 }

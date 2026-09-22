@@ -19,19 +19,18 @@ export function Experience() {
         >
           <motion.div variants={fadeUpItem} className="lg:col-span-7">
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
-              Experiências
+              Para quem é
             </p>
-            <h2 className="max-w-5xl font-serif text-[3.15rem] font-medium leading-[0.94] tracking-normal sm:text-[4.75rem] sm:leading-[0.92] lg:text-[7rem] xl:text-[7.5rem]">
-              Celebrações com tempo, natureza e presença.
+            <h2 className="max-w-5xl font-serif h-display">
+              Um só espaço, do casamento à festa de família.
             </h2>
           </motion.div>
           <motion.p
             variants={fadeUpItem}
             className="max-w-xl text-base leading-relaxed text-bone/70 sm:text-lg lg:col-span-4 lg:col-start-9"
           >
-            Casamentos, aniversários e encontros especiais em um cenário
-            reservado, com natureza, arquitetura e serviço pensado para cada
-            momento.
+            Casamentos, aniversários e encontros em um cenário de campo, com o
+            que a sua festa precisa.
           </motion.p>
         </motion.div>
 
@@ -52,7 +51,7 @@ export function Experience() {
                 image={image}
                 alt={`${title} no Eventos Haras San Gregório.`}
                 className="absolute inset-0"
-                imgClassName="h-full w-full object-contain"
+                imgClassName="h-full w-full object-cover"
                 sizes="(min-width: 768px) 33vw, 100vw"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,18,15,0.08),rgba(16,18,15,0.58)_58%,rgba(16,18,15,0.9))]" />
@@ -64,10 +63,10 @@ export function Experience() {
                   </span>
                 </div>
                 <div>
-                  <h3 className="font-serif text-4xl font-medium leading-none tracking-normal">
+                  <h3 className="font-serif text-3xl font-medium leading-tight tracking-normal sm:text-4xl">
                     {title}
                   </h3>
-                  <p className="mt-5 text-sm leading-relaxed text-bone/75 transition-all duration-700 sm:translate-y-3 sm:text-bone/0 sm:group-hover:translate-y-0 sm:group-hover:text-bone/75">
+                  <p className="mt-5 text-sm leading-relaxed text-bone/80">
                     {copy}
                   </p>
                 </div>

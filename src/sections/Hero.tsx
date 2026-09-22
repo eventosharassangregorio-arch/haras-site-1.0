@@ -2,19 +2,31 @@ import { useEffect, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown, MapPin } from 'lucide-react'
 import { Button } from '../components/Button.jsx'
-import { brand, heroVideo, quoteUrl, smallSignals, whatsappUrl } from '../data/content.js'
+import { brand, heroVideoSources, images, quoteUrl, smallSignals, whatsappUrl } from '../data/content.js'
 import { Navbar } from './Navbar'
 
 export function Hero() {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [0, 520], [1, 0.28])
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
+  const [videoSrc, setVideoSrc] = useState('')
   const [videoReady, setVideoReady] = useState(false)
 
   useEffect(() => {
+    const connection = navigator.connection
+    const saveData = connection?.saveData
+    const slow = /(^|-)2g$/.test(connection?.effectiveType || '')
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    setShouldLoadVideo(!prefersReducedMotion)
+    if (prefersReducedMotion || saveData || slow) return undefined
+
+    // Vídeo real de drone do Haras: um recorte na horizontal para telas largas
+    // e o quadro vertical original para o celular.
+    const isPortrait = window.innerHeight > window.innerWidth
+    const start = () => setVideoSrc(isPortrait ? heroVideoSources.mobile : heroVideoSources.desktop)
+
+    // O vídeo só começa a baixar depois que a página já apareceu (foto de capa primeiro).
+    const timer = window.setTimeout(start, 1200)
+    return () => window.clearTimeout(timer)
   }, [])
 
   return (
@@ -22,7 +34,17 @@ export function Hero() {
       id="top"
       className="cinematic-noise hero-shell hero-grain relative flex min-h-[100svh] overflow-hidden bg-forest text-bone"
     >
-      {shouldLoadVideo && (
+      <img
+        src={images.hero.src}
+        srcSet={images.hero.srcSet}
+        sizes="100vw"
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
+        className="hero-media hero-still absolute inset-0 h-full w-full object-cover"
+      />
+      {videoSrc && (
         <video
           aria-hidden="true"
           autoPlay
@@ -36,7 +58,7 @@ export function Hero() {
             videoReady ? 'is-ready' : ''
           ].join(' ')}
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
       )}
       <div className="hero-cinema-grade absolute inset-0" />
@@ -72,25 +94,28 @@ export function Hero() {
               ))}
             </div>
 
-            <h1 className="hero-title max-w-6xl font-serif text-[3.6rem] font-medium leading-[0.9] tracking-normal sm:text-[6rem] sm:leading-[0.86] lg:text-[8.5rem] xl:text-[10rem]">
-              <span className="hero-title-line hero-title-line-top">Um espaço raro</span>
-              <span className="hero-title-line">para momentos únicos.</span>
+            <h1 className="hero-title max-w-6xl font-serif h-hero">
+              Casamentos e festas em um haras no meio do verde.
             </h1>
           </div>
 
           <div className="max-w-md lg:col-span-4 lg:justify-self-end">
             <p className="text-base leading-relaxed text-bone/80 sm:text-lg">
-              Celebrações exclusivas em meio à natureza, com privacidade,
-              arquitetura e uma atmosfera que permanece na memória.
+              Salão de madeira, jardins e piscina semi-olímpica, com mesas,
+              cadeiras e louça incluídas. Venha conhecer o espaço: a visita é
+              gratuita e sem compromisso.
             </p>
             <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
               <Button href={whatsappUrl} variant="light">
-                Agendar Visita
+                Agendar visita gratuita
               </Button>
               <Button href={quoteUrl} variant="ghost">
-                Solicitar orçamento
+                Falar no WhatsApp
               </Button>
             </div>
+            <p className="mt-5 max-w-[15rem] text-xs leading-relaxed text-bone/70 sm:max-w-none">
+              Sem custo · Sem compromisso · Combinamos o melhor horário com você
+            </p>
           </div>
         </motion.div>
 
