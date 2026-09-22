@@ -59,8 +59,12 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] B. Vídeo horizontal de drone real (recorte do clipe DJI) no topo do desktop; vídeo vertical do mesmo drone no celular
 - [x] C. Removido o limite de convidados (topo, meta, FAQ, cartões)
 - [x] D. Títulos: fonte trocada para Playfair Display, tamanhos menores, sem sombra pesada
-- [ ] E. Fotos da cadeira Tramontina Alegra e da mesa montada (não veio no Drive — falta o cliente tirar 2 fotos)
+- [x] E. Foto da cadeira/mesa: descartada a pedido do cliente, não entra no site
 - [x] F. 19 fotos profissionais do espaço (salão, piscina, jardins, sinuca, churrasqueira) integradas no site
 - [x] G. Avaliações do Google: 4,9 (37), 6 depoimentos reais aplicados no site
 - [ ] H. Telefone do Google (48) 99946-3810 x telefone do site (48) 99672-9976: confirmar qual é o certo
 - [ ] I. Ponto de atenção em avaliação: "a entrada" (acesso). Tratar em "Como chegar"
+
+## Ajustes pedidos em 22/09 (rodada 3)
+- [x] J. "Salão dos Arcos" era um nome ruim/sem sentido; renomeado para "Salão Principal" (card da Estrutura e legenda da Galeria). A outra foto que já usava "Salão principal" (hall de entrada com escadaria) virou "Hall de entrada" para não duplicar o nome
+- [x] K. Título do topo "em um haras no meio do verde" não vendia; trocado para "com a exclusividade de um haras", mantendo "Casamentos e festas" na primeira linha
