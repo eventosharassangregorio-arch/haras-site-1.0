@@ -110,9 +110,9 @@ a {
 }
 
 .h-hero {
-  font-size: clamp(2.35rem, 1.1rem + 3.9vw, 4.75rem);
+  font-size: clamp(2.8rem, 1rem + 8vw, 9rem);
   font-weight: 500;
-  line-height: 1.06;
+  line-height: 1.02;
   letter-spacing: -0.015em;
   text-wrap: balance;
 }

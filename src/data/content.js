@@ -187,8 +187,8 @@ export const experiences = [
     image: images.cake
   },
   {
-    title: 'Confraternizações e eventos de empresa',
-    copy: 'Um lugar fora do escritório para reunir a equipe ou receber clientes.',
+    title: 'Confraternizações',
+    copy: 'Eventos de empresa num lugar fora do escritório, ideal para reunir a equipe ou receber clientes.',
     icon: UsersRound,
     image: images.venueChurrasqueira
   }
