@@ -134,7 +134,9 @@ export const images = {
   venueStairsGolden: responsive('mg-7113'),
   venuePoolGarden: responsive('mg-7124'),
   venueFacade: responsive('mg-7136'),
-  venueArcades: responsive('mg-7138')
+  venueArcades: responsive('mg-7138'),
+  venueChurrasqueiraFire: responsive('img-1551'),
+  venueHorse: responsive('8e6a901d-fad1-4dd1-acc3-240894dfc96f')
 }
 
 export const navLinks = [
@@ -190,7 +192,7 @@ export const experiences = [
     title: 'Confraternizações',
     copy: 'Eventos de empresa num lugar fora do escritório, ideal para reunir a equipe ou receber clientes.',
     icon: UsersRound,
-    image: images.venueChurrasqueira
+    image: images.venueChurrasqueiraFire
   }
 ]
 
@@ -201,7 +203,8 @@ export const gallery = [
   { title: 'Celebração no jardim', image: images.brunaEdu, ratio: 'aspect-[4/5]' },
   { title: 'Arcadas e jardim', image: images.venueArcades, ratio: 'aspect-[3/4]' },
   { title: 'Sinuca e lazer', image: images.venueSinuca, ratio: 'aspect-[3/4]' },
-  { title: 'Churrasqueira', image: images.venueChurrasqueira, ratio: 'aspect-[4/5]' },
+  { title: 'Churrasqueira acesa', image: images.venueChurrasqueiraFire, ratio: 'aspect-[4/5]' },
+  { title: 'Os cavalos do haras', image: images.venueHorse, ratio: 'aspect-[4/5]' },
   { title: 'Escadaria', image: images.venueStairsGolden, ratio: 'aspect-[4/5]' },
   { title: 'Retrato no campo', image: images.fieldCouple, ratio: 'aspect-[4/5]' },
   { title: 'Vestido no arco', image: images.dressArch, ratio: 'aspect-[3/4]' },

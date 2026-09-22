@@ -68,3 +68,10 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 ## Ajustes pedidos em 22/09 (rodada 3)
 - [x] J. "Salão dos Arcos" era um nome ruim/sem sentido; renomeado para "Salão Principal" (card da Estrutura e legenda da Galeria). A outra foto que já usava "Salão principal" (hall de entrada com escadaria) virou "Hall de entrada" para não duplicar o nome
 - [x] K. Título do topo "em um haras no meio do verde" não vendia; trocado para "com a exclusividade de um haras", mantendo "Casamentos e festas" na primeira linha
+
+## Varredura completa do Drive em 22/09
+- [x] L. Vasculhadas as 4 pastas com estrela até o fim: **drone** (50 clipes, já usados), **HARAS** (47 fotos, já usadas), **Eventos haras imagens e videos** (51 itens: cavalos, churrasqueira acesa, book de casamentos — já espelha o que tinha no Desktop), **Haras** (raiz com subpastas Logos e "valentino faz 1ano/highlights", 103 fotos da Festa Limão Siciliano já representada por 12 fotos no site)
+- [x] M. Logo oficial encontrado (pasta Logos): brasão com cavalo dourado + "EVENTOS HARAS SAN GREGÓRIO", em PNG e SVG. O favicon genérico (um "H" gerado) foi trocado pelo SVG do cavalo
+- [x] N. Foto real de um cavalo do haras (criança fazendo carinho) adicionada à Galeria — reforça a identidade "haras" que agora está no título do site
+- [x] O. Churrasqueira: trocada a foto fria (vazia, de dia) por uma com o fogo aceso, usada no card "Confraternizações" e na Galeria
+- Nenhuma pasta do Drive ficou sem visitar. Encerrado.

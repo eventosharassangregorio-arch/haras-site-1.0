@@ -63,7 +63,10 @@ export function Experience() {
                   </span>
                 </div>
                 <div>
-                  <h3 className="break-words font-serif text-3xl font-medium leading-tight tracking-normal sm:text-4xl">
+                  <h3
+                    lang="pt-BR"
+                    className="font-serif text-2xl font-medium leading-tight tracking-normal [hyphens:auto] sm:text-3xl"
+                  >
                     {title}
                   </h3>
                   <p className="mt-5 text-sm leading-relaxed text-bone/80">
