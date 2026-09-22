@@ -195,7 +195,7 @@ export const experiences = [
 ]
 
 export const gallery = [
-  { title: 'Salão de madeira', image: images.venueHallWide, ratio: 'aspect-[5/4]' },
+  { title: 'Salão dos Arcos', image: images.venueHallWide, ratio: 'aspect-[5/4]' },
   { title: 'Piscina e arco', image: images.venuePoolArch, ratio: 'aspect-[4/5]' },
   { title: 'Bolo e flores', image: images.cake, ratio: 'aspect-[4/5]' },
   { title: 'Celebração no jardim', image: images.brunaEdu, ratio: 'aspect-[4/5]' },
@@ -327,8 +327,8 @@ export const structureItems = [
     className: 'lg:col-span-7'
   },
   {
-    title: 'Salão de madeira',
-    copy: 'Acolhe de 50 a 60 pessoas e se conecta com a área externa.',
+    title: 'Salão dos Arcos',
+    copy: 'Piso de madeira e arcos amplos. Acolhe de 50 a 60 pessoas e se conecta com a área externa.',
     icon: PanelsTopLeft,
     image: images.venueHall,
     className: 'lg:col-span-5'

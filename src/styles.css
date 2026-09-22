@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  min-width: 320px;
   margin: 0;
   background: #f7f3ea;
+  overflow-x: hidden;
 }
 
 button,
