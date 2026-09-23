@@ -33,18 +33,15 @@ export const brand = {
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Rod.+Jo%C3%A3o+Gualberto+Soares%2C+3115%2C+Ingleses+do+Rio+Vermelho%2C+Florian%C3%B3polis'
 }
 
-export const whatsappFormPhone = '5548996729976'
+// Todos os botões de WhatsApp passam por esta página intermediária (mede a conversão e abre a conversa).
+export const whatsappRedirectPath = '/whatsapp-redirect'
 
 export const whatsappFormUrl = (message) =>
-  `https://api.whatsapp.com/send?phone=${whatsappFormPhone}&text=${encodeURIComponent(message)}`
+  `${whatsappRedirectPath}?text=${encodeURIComponent(message)}`
 
-export const whatsappUrl = whatsappFormUrl(
-  'Olá! Vim pelo site e gostaria de agendar uma visita gratuita ao Haras San Gregório. Quais horários vocês têm disponíveis?'
-)
+export const whatsappUrl = whatsappRedirectPath
 
-export const quoteUrl = whatsappFormUrl(
-  'Olá! Vim pelo site e gostaria de conversar sobre um evento no Haras San Gregório.'
-)
+export const quoteUrl = whatsappRedirectPath
 
 export const instagramUrl =
   'https://www.instagram.com/eventosharassangregorio?igsh=MXV2NGZheHU4NTR2Zw%3D%3D&utm_source=qr'

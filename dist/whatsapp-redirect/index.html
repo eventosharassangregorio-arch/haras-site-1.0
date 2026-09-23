@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Abrindo o WhatsApp… | Haras San Gregório</title>
+    <style>
+      html, body { height: 100%; margin: 0; }
+      body { display: grid; place-items: center; background: #10120f; color: #fbf8ef; font-family: Georgia, serif; text-align: center; padding: 24px; }
+      p { margin: 0 0 14px; font-size: 18px; }
+      a { color: #c7a96f; font-family: Arial, sans-serif; font-size: 14px; }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16958858705"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'AW-16958858705');
+
+      var PHONE = '5548996729976';
+      var DEFAULT_TEXT = 'Olá! Vim pelo site e gostaria de agendar uma visita gratuita ao Haras San Gregório. Quais horários vocês têm disponíveis?';
+      var params = new URLSearchParams(window.location.search);
+      // Só o texto da mensagem pode mudar; o número de destino é sempre o do Haras.
+      var text = (params.get('text') || DEFAULT_TEXT).slice(0, 1000);
+      var target = 'https://api.whatsapp.com/send?phone=' + PHONE + '&text=' + encodeURIComponent(text);
+      var done = false;
+
+      function go() {
+        if (done) return;
+        done = true;
+        window.location.replace(target);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var link = document.getElementById('manual');
+        if (link) link.href = target;
+      });
+
+      // Registra a conversão no Google Ads e só então abre o WhatsApp (com limite de 1,2 s).
+      gtag('event', 'conversion', {
+        send_to: 'AW-16958858705/fvnuCOfN5oIdENHLzpY_',
+        event_callback: go
+      });
+      setTimeout(go, 1200);
+    </script>
+  </head>
+  <body>
+    <div>
+      <p>Abrindo o WhatsApp do Haras San Gregório…</p>
+      <a id="manual" href="#">Se não abrir, toque aqui</a>
+    </div>
+  </body>
+</html>
