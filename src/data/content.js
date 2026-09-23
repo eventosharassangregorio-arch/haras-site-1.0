@@ -135,7 +135,7 @@ export const images = {
   venuePoolGarden: responsive('mg-7124'),
   venueFacade: responsive('mg-7136'),
   venueArcades: responsive('mg-7138'),
-  venueChurrasqueiraFire: responsive('img-1551'),
+  venueChurrasqueiraFire: responsive('img-1550'),
   venueHorse: responsive('8e6a901d-fad1-4dd1-acc3-240894dfc96f')
 }
 

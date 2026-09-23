@@ -75,3 +75,9 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] N. Foto real de um cavalo do haras (criança fazendo carinho) adicionada à Galeria — reforça a identidade "haras" que agora está no título do site
 - [x] O. Churrasqueira: trocada a foto fria (vazia, de dia) por uma com o fogo aceso, usada no card "Confraternizações" e na Galeria
 - Nenhuma pasta do Drive ficou sem visitar. Encerrado.
+
+## Feedback no link de teste (22/09, noite)
+- [x] P. Vídeo baixa resolução: era 1280x720/720x1280; recodificado em Full HD (1920x1080 / 1080x1920), 30fps, com limite de taxa de bits (evita picos que travam)
+- [x] Q. Pessoas andando no vídeo: trocado para um trecho do mesmo voo em que o drone se afasta e revela a propriedade inteira, sem gente visível
+- [x] R. Vídeo travando: preload trocado de "metadata" para "auto" (o navegador baixa o vídeo antes de tocar, em vez de tentar tocar enquanto baixa)
+- [x] S. Foto da churrasqueira com parte preta grande: trocada para a outra foto (mosaico colorido + fogo, sem a caixa preta da coifa)
