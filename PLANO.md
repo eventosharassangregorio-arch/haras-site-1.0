@@ -81,3 +81,8 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] Q. Pessoas andando no vídeo: trocado para um trecho do mesmo voo em que o drone se afasta e revela a propriedade inteira, sem gente visível
 - [x] R. Vídeo travando: preload trocado de "metadata" para "auto" (o navegador baixa o vídeo antes de tocar, em vez de tentar tocar enquanto baixa)
 - [x] S. Foto da churrasqueira com parte preta grande: trocada para a outra foto (mosaico colorido + fogo, sem a caixa preta da coifa)
+
+## Ajuste fino no vídeo e título (23/09)
+- [x] T. Estrada de terra aparecendo na lateral direita do vídeo: recorte ajustado para excluir a estrada em todo o trecho usado
+- [x] U. Vídeo ainda mostrava alguém limpando a piscina nos primeiros segundos do recorte anterior; trocado para uma janela de tempo do mesmo voo com pessoas bem mais discretas (nem toda a filmagem desse voo ficou 100% livre de gente, é dia de preparação de evento, mas esse trecho é o mais limpo)
+- [x] V. Título do topo reduzido um pouco (de até 9rem para até 7,75rem no desktop)
