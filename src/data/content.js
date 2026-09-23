@@ -254,12 +254,12 @@ export const pastEvent = {
       ratio: 'aspect-[4/5]'
     },
     {
-      title: 'Receber com afeto',
+      title: 'Túnel de limões',
       image: remoteCloudinaryImage('Valentinofaz1ano-3_jigahq'),
       ratio: 'aspect-[5/4]'
     },
     {
-      title: 'Mesa temática',
+      title: 'Recreação infantil',
       image: remoteCloudinaryImage('Valentinofaz1ano-39_hjvp3i'),
       ratio: 'aspect-[4/5]'
     },
@@ -274,7 +274,7 @@ export const pastEvent = {
       ratio: 'aspect-[3/4]'
     },
     {
-      title: 'Memórias no campo',
+      title: 'Fachada da festa',
       image: remoteCloudinaryImage('Valentinofaz1ano-1_hxtjqa'),
       ratio: 'aspect-[5/4]'
     }

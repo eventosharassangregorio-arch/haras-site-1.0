@@ -7,7 +7,7 @@ export function PastEvents() {
   const cardLayouts = [
     'lg:col-span-2 lg:row-span-2',
     'lg:col-span-2',
-    'lg:row-span-2',
+    'lg:col-span-2 lg:row-span-2',
     '',
     '',
     'lg:col-span-2',
@@ -68,7 +68,7 @@ export function PastEvents() {
                 image={image}
                 alt={`${title} no Eventos Haras San Gregório.`}
                 className="absolute inset-0 h-full w-full"
-                imgClassName="h-full w-full object-contain"
+                imgClassName="h-full w-full object-cover"
                 sizes={
                   cardLayouts[index]?.includes('col-span-2')
                     ? '(min-width: 1024px) 50vw, (min-width: 640px) 50vw, 100vw'
