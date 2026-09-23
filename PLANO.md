@@ -15,7 +15,7 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [ ] 0.8 Google Business Profile: existe, está verificado, quantas avaliações?
 
 ## Fase 1 — Base técnica (antes de qualquer anúncio)
-- [~] 1.1 (código pronto em `src/lib/tracking.js`; falta o ID do GTM em `VITE_GTM_ID`) Rastreamento: Google Tag Manager + GA4; eventos para clique em WhatsApp, envio do formulário, clique em telefone e clique em "Agendar visita"
+- [x] 1.1 (Google Ads AW-16958858705, conversão "Clique no WhatsApp" ligada por gtag em `src/lib/tracking.js`; falta só publicar e verificar no Ads) Rastreamento: Google Tag Manager + GA4; eventos para clique em WhatsApp, envio do formulário, clique em telefone e clique em "Agendar visita"
 - [x] 1.2 (feito e testado) Mensagem do WhatsApp com texto inicial identificando origem (página + botão) e UTM/gclid guardados
 - [x] 1.3 (17,6 MB → ~1,5 MB no celular / ~3 MB no desktop; foto de capa imediata) Vídeo do topo: imagem de capa imediata, vídeo comprimido (alvo abaixo de 3 MB) e carregado só depois, sem carregar em dados móveis lentos
 - [ ] 1.4 (fazer depois de fechar as páginas, na Fase 2) Pré-renderizar as páginas (HTML pronto para o Google e para redes sociais)
@@ -97,3 +97,8 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 ## Ajustes pedidos em 23/09 (rodada 5)
 - [x] BB. 4 fotos novas da Festa Limão Siciliano (mesa de doces, bolinhos de aniversário, o aniversariante Valentino, lembrancinha personalizada com o nome dele)
 - [x] CC. Confirmado: as miniaturas quebradas no Drive eram falha de carregamento do próprio Drive, não das fotos (as já usadas no site vieram exatamente dessa pasta)
+
+## Conta de Ads nova (23/09)
+- Conta 751-569-4647 criada pelo cliente. Ação de conversão "Clique no WhatsApp" (categoria: lead, valor fixo R$ 1, contagem 'uma', janela 90 dias). Site: harassangregorioeventos.com
+- Tag: gtag.js direto (AW-16958858705), evento conversion no clique de qualquer link do WhatsApp e no envio do formulário
+- Falta: clicar em "Concordar e concluir" nos termos de conversões otimizadas (é do cliente), publicar o site, verificar o status da tag no Ads

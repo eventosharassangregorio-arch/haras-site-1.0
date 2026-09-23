@@ -1,4 +1,6 @@
 const GTM_ID = import.meta.env.VITE_GTM_ID || ''
+const ADS_ID = 'AW-16958858705'
+const ADS_WHATSAPP_LABEL = 'fvnuCOfN5oIdENHLzpY_'
 const STORAGE_KEY = 'haras_attribution'
 const CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'gbraid', 'wbraid']
 
@@ -28,6 +30,30 @@ const captureAttribution = () => {
 export const track = (event, params = {}) => {
   window.dataLayer = window.dataLayer || []
   window.dataLayer.push({ event, ...readAttribution(), ...params })
+  // O formulário abre o WhatsApp por script (não por link), então a conversão é enviada aqui.
+  if (event === 'generate_lead') reportAdsConversion(ADS_WHATSAPP_LABEL)
+}
+
+// Tag do Google (gtag.js) ligada direto ao Google Ads, sem depender do Tag Manager.
+const loadGtag = () => {
+  if (!ADS_ID || document.getElementById('gtag-script')) return
+  window.dataLayer = window.dataLayer || []
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments)
+  }
+  window.gtag('js', new Date())
+  window.gtag('config', ADS_ID)
+  const script = document.createElement('script')
+  script.id = 'gtag-script'
+  script.async = true
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${ADS_ID}`
+  document.head.appendChild(script)
+}
+
+const reportAdsConversion = (label) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', { send_to: `${ADS_ID}/${label}` })
+  }
 }
 
 const loadGtm = () => {
@@ -53,6 +79,7 @@ const handleClick = (event) => {
 
   if (isWhatsappLink(href)) {
     track('whatsapp_click', { section, link_text: label })
+    reportAdsConversion(ADS_WHATSAPP_LABEL)
   } else if (href.startsWith('tel:')) {
     track('phone_click', { section, link_text: label })
   }
@@ -60,6 +87,7 @@ const handleClick = (event) => {
 
 export const initTracking = () => {
   captureAttribution()
+  loadGtag()
   loadGtm()
   document.addEventListener('click', handleClick, true)
 }
