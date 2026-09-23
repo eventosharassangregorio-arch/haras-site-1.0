@@ -96,7 +96,7 @@ export function Hero() {
 
             <h1 className="hero-title max-w-6xl font-serif h-hero">
               <span className="block">Casamentos e festas</span>
-              <span className="block">com a exclusividade de um haras.</span>
+              <span className="block">do jeito que você sonhou.</span>
             </h1>
           </div>
 
