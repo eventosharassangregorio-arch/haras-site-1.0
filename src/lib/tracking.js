@@ -52,16 +52,6 @@ const handleClick = (event) => {
   const label = (link.getAttribute('aria-label') || link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60)
 
   if (isWhatsappLink(href)) {
-    // Acrescenta a origem à mensagem para saber de qual botão veio a conversa.
-    try {
-      const url = new URL(href)
-      if (url.searchParams.has('text') && !url.searchParams.get('text').includes('(ref:')) {
-        url.searchParams.set('text', `${url.searchParams.get('text')} (ref: ${section})`)
-        link.href = url.toString()
-      }
-    } catch {
-      // mantém o link original
-    }
     track('whatsapp_click', { section, link_text: label })
   } else if (href.startsWith('tel:')) {
     track('phone_click', { section, link_text: label })

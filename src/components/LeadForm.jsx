@@ -29,7 +29,7 @@ export function LeadForm() {
       : ''
 
     const message = [
-      `Olá! Gostaria de agendar uma visita gratuita ao ${brand.shortName}.`,
+      `Olá! Vim pelo site e gostaria de agendar uma visita gratuita ao ${brand.shortName}.`,
       '',
       `Nome: ${form.name}`,
       form.type ? `Tipo de evento: ${form.type}` : '',
