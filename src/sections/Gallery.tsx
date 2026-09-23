@@ -49,7 +49,7 @@ export function Gallery() {
           variants={staggerContainer}
           className="masonry"
         >
-          {gallery.map(({ title, image, ratio }) => (
+          {gallery.map(({ title, image, ratio, imgClassName }) => (
             <motion.figure
               variants={fadeUpItem}
               key={title}
@@ -59,7 +59,7 @@ export function Gallery() {
                 image={image}
                 alt={title}
                 className={`block ${ratio} overflow-hidden`}
-                imgClassName="h-full w-full object-contain"
+                imgClassName={['h-full w-full object-contain', imgClassName].filter(Boolean).join(' ')}
                 sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-coal/80 to-transparent p-5 pt-16 text-xs font-semibold uppercase tracking-normal text-bone/80 opacity-100 transition-opacity duration-500 sm:opacity-0 sm:group-hover:opacity-100">

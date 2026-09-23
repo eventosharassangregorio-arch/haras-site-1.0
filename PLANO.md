@@ -86,3 +86,10 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] T. Estrada de terra aparecendo na lateral direita do vídeo: recorte ajustado para excluir a estrada em todo o trecho usado
 - [x] U. Vídeo ainda mostrava alguém limpando a piscina nos primeiros segundos do recorte anterior; trocado para uma janela de tempo do mesmo voo com pessoas bem mais discretas (nem toda a filmagem desse voo ficou 100% livre de gente, é dia de preparação de evento, mas esse trecho é o mais limpo)
 - [x] V. Título do topo reduzido um pouco (de até 9rem para até 7,75rem no desktop)
+
+## Ajustes pedidos em 23/09 (rodada 4)
+- [x] W. Filtro suave de teste em: Piscina e jardins, Hall de entrada (About), Piscina e arco, Salão com lustre, Sinuca e lazer (Galeria) — leve ajuste de saturação/contraste/calor para uniformizar fotos de celular e de câmera profissional
+- [x] X. Churrasqueira: trocada de novo, agora pela foto profissional (mesma do mosaico, câmera boa) em vez da foto de celular focada no fogão
+- [x] Y. Salão Principal: copy corrigida para "Comporta até 60 pessoas", removida a menção a "se conecta com a área externa"
+- [x] Z. Depoimentos: adicionado ícone de pessoa ao lado do nome
+- [x] AA. FAQ: novo item "Tem acomodação para quem quiser se hospedar?" logo após "Onde fica?", sem mencionar número de quartos

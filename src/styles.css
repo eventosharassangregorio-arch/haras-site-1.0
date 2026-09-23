@@ -117,6 +117,11 @@ a {
   text-wrap: balance;
 }
 
+/* Filtro suave para uniformizar fotos de origens diferentes (celular e câmera profissional). */
+.img-soft-grade {
+  filter: saturate(0.92) contrast(1.04) brightness(1.02) sepia(0.06);
+}
+
 .hero-still {
   animation: hero-drift 28s ease-in-out infinite alternate;
 }

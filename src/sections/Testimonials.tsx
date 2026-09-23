@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
+import { Quote, UserRound } from 'lucide-react'
 import { fadeUpItem, staggerContainer } from '../components/motionPresets.js'
 import { googleRating, testimonials } from '../data/content.js'
 
@@ -42,13 +42,18 @@ export function Testimonials() {
                 <p className="font-serif text-xl leading-snug text-forest">
                   “{quote}”
                 </p>
-                <div className="mt-auto pt-8">
-                  <p className="text-sm font-semibold uppercase tracking-normal text-charcoal">
-                    {author}
-                  </p>
-                  <p className="mt-2 text-xs uppercase tracking-normal text-charcoal/55">
-                    {meta}
-                  </p>
+                <div className="mt-auto flex items-center gap-3 pt-8">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-forest/10 text-forest">
+                    <UserRound className="h-4 w-4" strokeWidth={1.5} />
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold uppercase tracking-normal text-charcoal">
+                      {author}
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-normal text-charcoal/55">
+                      {meta}
+                    </p>
+                  </div>
                 </div>
               </motion.article>
             ))}

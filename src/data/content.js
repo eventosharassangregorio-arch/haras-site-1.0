@@ -159,13 +159,14 @@ export const spaceImages = [
     image: images.venuePool,
     className: 'lg:col-span-7 lg:row-span-2',
     ratio: 'aspect-[16/10] lg:aspect-auto',
-    imgClassName: ''
+    imgClassName: 'img-soft-grade'
   },
   {
     title: 'Hall de entrada',
     image: images.venueFoyer,
     className: 'lg:col-span-5',
-    ratio: 'aspect-[4/5]'
+    ratio: 'aspect-[4/5]',
+    imgClassName: 'img-soft-grade'
   },
   {
     title: 'Arcadas do Haras',
@@ -192,18 +193,18 @@ export const experiences = [
     title: 'Confraternizações',
     copy: 'Eventos de empresa num lugar fora do escritório, ideal para reunir a equipe ou receber clientes.',
     icon: UsersRound,
-    image: images.venueChurrasqueiraFire
+    image: images.venueChurrasqueira
   }
 ]
 
 export const gallery = [
   { title: 'Salão Principal', image: images.venueHallWide, ratio: 'aspect-[5/4]' },
-  { title: 'Piscina e arco', image: images.venuePoolArch, ratio: 'aspect-[4/5]' },
+  { title: 'Piscina e arco', image: images.venuePoolArch, ratio: 'aspect-[4/5]', imgClassName: 'img-soft-grade' },
   { title: 'Bolo e flores', image: images.cake, ratio: 'aspect-[4/5]' },
   { title: 'Celebração no jardim', image: images.brunaEdu, ratio: 'aspect-[4/5]' },
   { title: 'Arcadas e jardim', image: images.venueArcades, ratio: 'aspect-[3/4]' },
-  { title: 'Sinuca e lazer', image: images.venueSinuca, ratio: 'aspect-[3/4]' },
-  { title: 'Churrasqueira acesa', image: images.venueChurrasqueiraFire, ratio: 'aspect-[4/5]' },
+  { title: 'Sinuca e lazer', image: images.venueSinuca, ratio: 'aspect-[3/4]', imgClassName: 'img-soft-grade' },
+  { title: 'Churrasqueira', image: images.venueChurrasqueira, ratio: 'aspect-[4/5]' },
   { title: 'Os cavalos do haras', image: images.venueHorse, ratio: 'aspect-[4/5]' },
   { title: 'Escadaria', image: images.venueStairsGolden, ratio: 'aspect-[4/5]' },
   { title: 'Retrato no campo', image: images.fieldCouple, ratio: 'aspect-[4/5]' },
@@ -212,7 +213,7 @@ export const gallery = [
   { title: 'Entrada do Haras', image: images.venueFacade, ratio: 'aspect-[5/4]' },
   { title: 'Jardim preparado', image: images.garden, ratio: 'aspect-[4/5]' },
   { title: 'Recepção no jardim', image: images.gardenReception, ratio: 'aspect-[5/4]' },
-  { title: 'Salão com lustre', image: images.venueChandelier, ratio: 'aspect-[4/5]' }
+  { title: 'Salão com lustre', image: images.venueChandelier, ratio: 'aspect-[4/5]', imgClassName: 'img-soft-grade' }
 ]
 
 export const pastEvent = {
@@ -331,7 +332,7 @@ export const structureItems = [
   },
   {
     title: 'Salão Principal',
-    copy: 'Piso de madeira e arcos amplos. Acolhe de 50 a 60 pessoas e se conecta com a área externa.',
+    copy: 'Piso de madeira e arcos amplos. Comporta até 60 pessoas.',
     icon: PanelsTopLeft,
     image: images.venueHall,
     className: 'lg:col-span-5'
@@ -397,6 +398,10 @@ export const faqs = [
   {
     q: 'Onde fica?',
     a: 'Nos Ingleses, em Florianópolis, perto do Costão Golf: Rod. João Gualberto Soares, 3115.'
+  },
+  {
+    q: 'Tem acomodação para quem quiser se hospedar?',
+    a: 'Sim. Fale com a gente para consultar disponibilidade e condições.'
   }
 ]
 
