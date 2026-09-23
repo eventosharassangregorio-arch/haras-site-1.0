@@ -277,6 +277,26 @@ export const pastEvent = {
       title: 'Fachada da festa',
       image: remoteCloudinaryImage('Valentinofaz1ano-1_hxtjqa'),
       ratio: 'aspect-[5/4]'
+    },
+    {
+      title: 'Mesa de doces',
+      image: responsive('valentinofaz1ano-10'),
+      ratio: 'aspect-[4/5]'
+    },
+    {
+      title: 'Bolinhos de aniversário',
+      image: responsive('valentinofaz1ano-25'),
+      ratio: 'aspect-[4/5]'
+    },
+    {
+      title: 'O aniversariante',
+      image: responsive('valentinofaz1ano-42'),
+      ratio: 'aspect-[4/5]'
+    },
+    {
+      title: 'Lembrancinha personalizada',
+      image: responsive('valentinofaz1ano-65'),
+      ratio: 'aspect-[4/5]'
     }
   ]
 }

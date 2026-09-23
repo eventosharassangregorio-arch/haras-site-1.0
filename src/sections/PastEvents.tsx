@@ -15,7 +15,11 @@ export function PastEvents() {
     '',
     '',
     'lg:row-span-2',
-    'lg:col-span-2'
+    'lg:col-span-2',
+    'lg:col-span-2',
+    '',
+    'lg:row-span-2',
+    ''
   ]
 
   return (

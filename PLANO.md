@@ -93,3 +93,7 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] Y. Salão Principal: copy corrigida para "Comporta até 60 pessoas", removida a menção a "se conecta com a área externa"
 - [x] Z. Depoimentos: adicionado ícone de pessoa ao lado do nome
 - [x] AA. FAQ: novo item "Tem acomodação para quem quiser se hospedar?" logo após "Onde fica?", sem mencionar número de quartos
+
+## Ajustes pedidos em 23/09 (rodada 5)
+- [x] BB. 4 fotos novas da Festa Limão Siciliano (mesa de doces, bolinhos de aniversário, o aniversariante Valentino, lembrancinha personalizada com o nome dele)
+- [x] CC. Confirmado: as miniaturas quebradas no Drive eram falha de carregamento do próprio Drive, não das fotos (as já usadas no site vieram exatamente dessa pasta)
