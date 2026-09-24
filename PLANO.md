@@ -62,7 +62,7 @@ Publicação: eu trabalho em uma branch e mostro o resultado; só publico em pro
 - [x] E. Foto da cadeira/mesa: descartada a pedido do cliente, não entra no site
 - [x] F. 19 fotos profissionais do espaço (salão, piscina, jardins, sinuca, churrasqueira) integradas no site
 - [x] G. Avaliações do Google: 4,9 (37), 6 depoimentos reais aplicados no site
-- [ ] H. Telefone do Google (48) 99946-3810 x telefone do site (48) 99672-9976: confirmar qual é o certo
+- [ ] H. Telefone do Google (48) 99849-5228 x telefone do site (48) 99672-9976: confirmar qual é o certo
 - [ ] I. Ponto de atenção em avaliação: "a entrada" (acesso). Tratar em "Como chegar"
 
 ## Ajustes pedidos em 22/09 (rodada 3)
