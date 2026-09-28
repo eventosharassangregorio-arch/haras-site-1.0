@@ -349,7 +349,7 @@ export const structureItems = [
   },
   {
     title: 'Salão Principal',
-    copy: 'Piso de madeira e arcos amplos. Comporta até 60 pessoas.',
+    copy: 'Piso de madeira e arcos amplos, pensado para receber com estilo.',
     icon: PanelsTopLeft,
     image: images.venueHall,
     className: 'lg:col-span-5'
@@ -364,7 +364,7 @@ export const structureItems = [
 ]
 
 export const includedItems = [
-  '10 mesas, cada uma para 6 a 8 pessoas',
+  '14 mesas, cada uma para 6 a 8 pessoas',
   '80 cadeiras Tramontina Alegra',
   'Pratos, talheres e copos para 80 pessoas'
 ]
@@ -406,7 +406,7 @@ export const faqs = [
   },
   {
     q: 'O que já vem incluso?',
-    a: '10 mesas (cada uma para 6 a 8 pessoas), 80 cadeiras Tramontina Alegra e pratos, talheres e copos para 80 pessoas. Também estão à disposição cozinha completa, freezers, geladeiras, churrasqueira e mesa de sinuca.'
+    a: '14 mesas (cada uma para 6 a 8 pessoas), 80 cadeiras Tramontina Alegra e pratos, talheres e copos para 80 pessoas. Também estão à disposição cozinha completa, freezers, geladeiras, churrasqueira e mesa de sinuca.'
   },
   {
     q: 'Posso montar em mais de um dia?',
