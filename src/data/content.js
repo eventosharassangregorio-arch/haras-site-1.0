@@ -188,7 +188,7 @@ export const experiences = [
   },
   {
     title: 'Confraternizações',
-    copy: 'Eventos de empresa num lugar fora do escritório, ideal para reunir a equipe ou receber clientes.',
+    copy: 'Fim de ano, integração de equipe ou recepção de clientes — tudo ao ar livre, longe da rotina do escritório.',
     icon: UsersRound,
     image: images.venueChurrasqueira
   }

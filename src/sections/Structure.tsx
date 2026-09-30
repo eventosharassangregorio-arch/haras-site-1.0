@@ -23,8 +23,8 @@ export function Structure() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-wood">
               Estrutura
             </p>
-            <h2 className="max-w-6xl font-serif text-forest h-display">
-              Tudo o que você precisa para receber, já no espaço.
+            <h2 className="max-w-6xl font-display text-forest h-display">
+              Tudo o que você precisa para receber, <span className="font-semibold">já no espaço.</span>
             </h2>
           </motion.div>
           <motion.p

@@ -33,8 +33,8 @@ export function Visit() {
           <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
             Visita gratuita
           </p>
-          <h2 className="font-serif h-display">
-            Alguns lugares precisam ser vistos pessoalmente.
+          <h2 className="font-display h-display">
+            Alguns lugares precisam ser <span className="font-semibold">vistos pessoalmente.</span>
           </h2>
           <p className="mt-8 max-w-xl text-base leading-relaxed text-bone/70 sm:text-lg">
             Agende uma visita gratuita, conheça o espaço e imagine o seu dia.

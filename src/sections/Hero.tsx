@@ -94,9 +94,9 @@ export function Hero() {
               ))}
             </div>
 
-            <h1 className="hero-title max-w-6xl font-serif h-hero">
-              <span className="block">Casamentos e festas</span>
-              <span className="block">do jeito que você sonhou.</span>
+            <h1 className="hero-title max-w-6xl font-display h-hero">
+              <span className="block font-light">Casamentos e festas</span>
+              <span className="block font-semibold">do jeito que você sonhou.</span>
             </h1>
           </div>
 

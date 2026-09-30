@@ -7,8 +7,8 @@ export function Faq() {
       <div className="mx-auto grid max-w-[92rem] gap-12 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-wood">Perguntas frequentes</p>
-          <h2 className="font-serif text-forest h-display">
-            Antes de visitar.
+          <h2 className="font-display text-forest h-display">
+            Antes de <span className="font-semibold">visitar.</span>
           </h2>
         </div>
         <div className="divide-y divide-charcoal/10 border-y border-charcoal/10 lg:col-span-7 lg:col-start-6">

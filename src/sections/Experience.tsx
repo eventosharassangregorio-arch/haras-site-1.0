@@ -21,8 +21,8 @@ export function Experience() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               Para quem é
             </p>
-            <h2 className="max-w-5xl font-serif h-display">
-              Um só espaço, do casamento à festa de família.
+            <h2 className="max-w-5xl font-display h-display">
+              Um só espaço, do casamento <span className="font-semibold">à festa de família.</span>
             </h2>
           </motion.div>
           <motion.p

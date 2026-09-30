@@ -17,7 +17,19 @@ export default {
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Manrope', 'Inter', 'Arial', 'sans-serif']
+        sans: ['Manrope', 'Inter', 'Arial', 'sans-serif'],
+        // Pilha de sistema: resolve para SF Pro Display em Mac/iOS/Safari,
+        // com fallback equivalente nas demais plataformas.
+        display: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"SF Pro Display"',
+          '"Segoe UI"',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif'
+        ]
       },
       boxShadow: {
         soft: '0 18px 48px rgba(26, 26, 26, 0.055)',

@@ -18,9 +18,9 @@ export function HowItWorks() {
           </motion.p>
           <motion.h2
             variants={fadeUpItem}
-            className="font-serif text-forest h-display"
+            className="font-display text-forest h-display"
           >
-            Como funciona a visita.
+            Como funciona <span className="font-semibold">a visita.</span>
           </motion.h2>
           <motion.p variants={fadeUpItem} className="mt-7 max-w-xl text-base leading-relaxed text-charcoal/70 sm:text-lg">
             Cada evento é diferente, então cada proposta é feita sob medida. Para começar, é só vir conhecer.

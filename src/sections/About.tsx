@@ -22,8 +22,8 @@ export function About() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               O Espaço
             </p>
-            <h2 className="max-w-5xl font-serif text-forest h-display">
-              Espaço para eventos nos Ingleses, com tudo pronto para receber.
+            <h2 className="max-w-5xl font-display text-forest h-display">
+              Espaço para eventos nos Ingleses, <span className="font-semibold">com tudo pronto para receber.</span>
             </h2>
           </motion.div>
           <motion.div variants={fadeUpItem} className="max-w-xl lg:col-span-4 lg:col-start-9">

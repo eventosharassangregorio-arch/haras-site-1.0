@@ -21,8 +21,8 @@ export function Gallery() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               Galeria cinematográfica
             </p>
-            <h2 className="font-serif text-forest h-display">
-              O cenário transforma tudo.
+            <h2 className="font-display text-forest h-display">
+              O cenário <span className="font-semibold">transforma tudo.</span>
             </h2>
           </motion.div>
           <motion.p

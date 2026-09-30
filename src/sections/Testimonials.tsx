@@ -18,8 +18,8 @@ export function Testimonials() {
             <p className="mb-6 text-xs font-semibold uppercase tracking-normal text-gold">
               Impressões
             </p>
-            <h2 className="font-serif text-forest h-display">
-              Quem já fez festa aqui.
+            <h2 className="font-display text-forest h-display">
+              Quem já fez <span className="font-semibold">festa aqui.</span>
             </h2>
             <p className="mt-8 flex items-baseline gap-3">
               <span className="font-serif text-6xl leading-none text-forest">{googleRating.score}</span>

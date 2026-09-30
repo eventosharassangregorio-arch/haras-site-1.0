@@ -103,7 +103,7 @@ a {
 
 .h-display {
   font-size: clamp(2.1rem, 1.2rem + 2.6vw, 3.9rem);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.012em;
   text-wrap: balance;
@@ -111,7 +111,7 @@ a {
 
 .h-hero {
   font-size: clamp(2.5rem, 1rem + 7vw, 7.75rem);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.02;
   letter-spacing: -0.015em;
   text-wrap: balance;

@@ -30,8 +30,8 @@ export function FinalCta() {
         <p className="mb-7 text-xs font-semibold uppercase tracking-normal text-gold">
           Visita gratuita e sem compromisso
         </p>
-        <h2 className="font-serif h-display">
-          Venha conhecer o Haras. A visita é por nossa conta.
+        <h2 className="font-display h-display">
+          Venha conhecer o Haras. <span className="font-semibold">A visita é por nossa conta.</span>
         </h2>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button href={quoteUrl} variant="light">
