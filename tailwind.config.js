@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./index.html', './festa-infantil/index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -13,7 +13,8 @@ export default {
         forest: '#17251B',
         sage: '#74806A',
         wood: '#6F543C',
-        gold: '#B89A5E'
+        gold: '#B89A5E',
+        sun: '#F3C443'
       },
       fontFamily: {
         serif: ['Playfair Display', 'Georgia', 'serif'],

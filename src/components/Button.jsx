@@ -10,7 +10,11 @@ export function Button({ href, children, variant = 'light', className = '' }) {
     gold:
       'border border-gold bg-gold text-forest hover:bg-transparent hover:text-gold focus-visible:outline-gold',
     ghost:
-      'border border-bone/40 bg-transparent text-bone hover:border-bone hover:bg-bone hover:text-forest focus-visible:outline-bone'
+      'border border-bone/40 bg-transparent text-bone hover:border-bone hover:bg-bone hover:text-forest focus-visible:outline-bone',
+    sun:
+      'border border-sun bg-sun text-forest hover:bg-transparent hover:text-forest focus-visible:outline-forest',
+    outline:
+      'border border-forest/30 bg-transparent text-forest hover:border-forest hover:bg-forest hover:text-bone focus-visible:outline-forest'
   }
 
   return (

@@ -39,7 +39,7 @@ export function Navbar() {
               scrolled ? 'bg-gold' : 'bg-bone/60'
             ].join(' ')}
           />
-          <span className="font-serif text-xl font-semibold leading-none tracking-normal sm:text-2xl">
+          <span className="font-display text-lg font-semibold leading-none tracking-tight sm:text-xl">
             {brand.shortName}
           </span>
         </a>

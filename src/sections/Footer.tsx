@@ -24,7 +24,7 @@ export function Footer() {
                 className="block h-14 w-14 overflow-hidden rounded-full border border-bone/20"
                 imgClassName="h-full w-full object-contain"
               />
-              <span className="font-serif text-3xl font-medium leading-none tracking-normal">
+              <span className="font-display text-2xl font-semibold leading-none tracking-tight">
                 {brand.shortName}
               </span>
             </a>

@@ -78,6 +78,14 @@ export default defineConfig(({ mode }) => {
         }
       }
     ],
-    publicDir: 'public'
+    publicDir: 'public',
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(process.cwd(), 'index.html'),
+          festaInfantil: path.resolve(process.cwd(), 'festa-infantil/index.html')
+        }
+      }
+    }
   }
 })
